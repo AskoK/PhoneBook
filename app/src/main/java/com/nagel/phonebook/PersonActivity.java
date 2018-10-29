@@ -45,7 +45,7 @@ public class PersonActivity extends AppCompatActivity {
         txtPhone = findViewById(R.id.etphone);
         txtEmail = findViewById(R.id.etemail);
         txtDate = findViewById(R.id.etdate);
-        txtTitle = findViewById(R.id.etemail);
+        txtTitle = findViewById(R.id.ettitle);
         txtText = findViewById(R.id.ettext);
         txtZip = findViewById(R.id.etzip);
 
