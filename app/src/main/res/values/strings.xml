@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">PhoneBook</string>
+    <string name="code">Enter code</string>
+    <string name="city">Enter city</string>
+    <string name="clr">Clear</string>
+    <string name="ok">OK</string>
+    <string name="fname">First name*</string>
+    <string name="lname">Last name</string>
+    <string name="addr">Address</string>
+    <string name="zip">Zip code</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="date">Date</string>
+    <string name="title">Title</string>
+    <string name="remove">Remove</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="first">First name</string>
+    <string name="last">Last name</string>
+    <string name="text">Description</string>
+    <string name="toast1">No contacts found</string>
+    <string name="menuShow">Show Contacts</string>
+    <string name="menuSearch">Search Contacts</string>
+    <string name="menuCreate">Create Contact</string>
+    <string name="createConact">Create Conctact</string>
+    <string name="searchContact">Search Contacts</string>
+    <string name="showContact">Contacts</string>
+    <string name="mainAct">Main Screen</string>
+    <string name="error">Not a valid name or zipcode! Name should be present and zipcode should contain 4 numbers</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="person">person</string>
+    <string name="people">people</string>
+
+</resources>
