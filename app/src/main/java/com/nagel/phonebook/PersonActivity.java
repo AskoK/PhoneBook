@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 /* Is used to display contact details, but also used to create new contacts, edit existing contacts, and
 delete contacts.
@@ -113,6 +116,12 @@ public class PersonActivity extends AppCompatActivity {
 
                 DbHelper dbHelper = new DbHelper(this);
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
+                boolean validCode = checkZipCode(db, zip);
+
+                if (!validCode){
+                    Toast.makeText(this, getString(R.string.zipError), Toast.LENGTH_LONG).show();
+                    return;
+                }
 
                 ContentValues values = new ContentValues(8);
                 values.put(DbHelper.ATABLE_COLUMNS[DbHelper.ACOLUMN_FIRSTNAME], fname);
@@ -140,6 +149,20 @@ public class PersonActivity extends AppCompatActivity {
             else {
                 Toast.makeText(this, getString(R.string.error), Toast.LENGTH_LONG).show();
             }
+    }
+
+    public boolean checkZipCode(SQLiteDatabase db, String zip){
+        if (zipcode.getCode().equals(zip)){
+            return true; // same zip code
+        }
+
+        Zipcodes model = new Zipcodes(db);
+        List<Zipcode> zipcodes = model.getZipcodes();
+        for (Zipcode item:zipcodes) {
+            if (item.getCode().equals(zip))return true; // valid code
+        }
+
+        return false; // invalid code
     }
 
     /* Finally, there is the last event handler used to delete a contact and thus perform a SQL

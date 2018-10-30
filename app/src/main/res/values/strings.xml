@@ -27,8 +27,8 @@
     <string name="showContact">Contacts</string>
     <string name="mainAct">Main Screen</string>
     <string name="error">Not a valid name or zipcode! Name should be present and zipcode should contain 4 numbers</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="person">person</string>
     <string name="people">people</string>
+    <string name="zipError">ZIP CODE DOESN\'T EXIST!</string>
 
 </resources>

@@ -134,9 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, SearchActivity.class);
                 startActivity(intent);
                 return true;
-            /*case MENU_CREATE:
-                createPerson(new Zipcode("", ""));
-                return true;*/
         }
         return super.onOptionsItemSelected(item);
     }
